@@ -1,0 +1,773 @@
+/* =========================================================
+   APP
+========================================================= */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(49, 95, 168, 0.08),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(99, 102, 241, 0.06),
+      transparent 25%
+    ),
+    #f5f7fb;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  width: 100%;
+
+  padding: 52px 6% 48px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #102f63 0%,
+      #17458a 48%,
+      #285eb0 100%
+    );
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  position: relative;
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 30px rgba(16, 47, 99, 0.18);
+}
+
+
+/* Decorative background */
+
+.header::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -140px;
+  top: -220px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.header::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  left: -120px;
+  bottom: -220px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+
+.header h1 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  text-align: center;
+
+  font-size: clamp(30px, 4vw, 46px);
+
+  font-weight: 750;
+
+  letter-spacing: -1.2px;
+}
+
+
+.header p {
+  position: relative;
+  z-index: 1;
+
+  margin: 12px auto 0;
+
+  max-width: 700px;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.container {
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+
+  padding: 42px 4% 80px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card {
+  width: 100%;
+
+  margin-bottom: 24px;
+
+  padding: 30px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 35px rgba(15, 23, 42, 0.055);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: #d3dce8;
+
+  box-shadow:
+    0 14px 40px rgba(15, 23, 42, 0.08);
+}
+
+
+.card h2 {
+  margin: 0 0 22px;
+
+  color: #173b73;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.4px;
+}
+
+
+/* =========================================================
+   TEXT AREA
+========================================================= */
+
+textarea {
+  display: block;
+
+  width: 100%;
+  min-height: 250px;
+
+  padding: 20px 22px;
+
+  resize: vertical;
+
+  color: #182333;
+
+  background: #f9fbfd;
+
+  border: 1px solid #d7dee8;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+textarea::placeholder {
+  color: #98a3b2;
+}
+
+textarea:hover {
+  border-color: #b9c5d3;
+}
+
+textarea:focus {
+  background: #ffffff;
+
+  border-color: #376db5;
+
+  box-shadow:
+    0 0 0 4px rgba(55, 109, 181, 0.10);
+}
+
+
+/* =========================================================
+   ANALYZE BUTTON
+========================================================= */
+
+button {
+  display: block;
+
+  margin: 22px auto 0;
+
+  padding: 13px 28px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #315fa8,
+      #244d91
+    );
+
+  border: none;
+
+  border-radius: 9px;
+
+  font-size: 15px;
+
+  font-weight: 650;
+
+  letter-spacing: 0.1px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 18px rgba(36, 77, 145, 0.22);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    filter 0.18s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.06);
+
+  box-shadow:
+    0 10px 24px rgba(36, 77, 145, 0.28);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error {
+  margin-top: 18px;
+
+  padding: 14px 16px;
+
+  color: #a1261b;
+
+  background: #fff5f4;
+
+  border: 1px solid #f1cbc7;
+
+  border-left: 4px solid #c43d32;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   RESULTS
+========================================================= */
+
+.results {
+  width: 100%;
+}
+
+
+/* =========================================================
+   SCORE CARD
+========================================================= */
+
+.score-card {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+
+  margin-bottom: 24px;
+
+  padding: 28px 32px;
+
+  background: white;
+
+  border: 1px solid #e1e7ef;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 35px rgba(15, 23, 42, 0.055);
+}
+
+.score-card h2 {
+  margin: 0 0 6px;
+
+  color: #173b73;
+
+  font-size: 23px;
+}
+
+.score-card p {
+  margin: 0;
+
+  color: #748091;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   SCORE
+========================================================= */
+
+.score {
+  width: 132px;
+  height: 132px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #ffffff 55%,
+      #eef3fa 56%,
+      #eef3fa 100%
+    );
+
+  border: 7px solid #d7e2f1;
+
+  box-shadow:
+    0 8px 25px rgba(23, 59, 115, 0.10);
+}
+
+.score span {
+  color: #173b73;
+
+  font-size: 27px;
+
+  font-weight: 750;
+}
+
+.score small {
+  margin-top: 2px;
+
+  color: #7a8696;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+}
+
+
+/* =========================================================
+   CLAIM
+========================================================= */
+
+.claim {
+  margin-top: 16px;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e7ee;
+
+  border-radius: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.claim:hover {
+  transform: translateY(-1px);
+
+  border-color: #cbd6e3;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================================
+   CLAIM HEADER
+========================================================= */
+
+.claim-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.claim-number {
+  color: #315f9f;
+
+  font-size: 12px;
+
+  font-weight: 750;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 6px 11px;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+
+  font-weight: 750;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.6px;
+}
+
+.supported {
+  color: #11663a;
+
+  background: #ecf9f1;
+
+  border: 1px solid #bfe7ce;
+}
+
+.hallucinated {
+  color: #a22920;
+
+  background: #fff0ee;
+
+  border: 1px solid #f0c4bf;
+}
+
+.unverified {
+  color: #855900;
+
+  background: #fff8e6;
+
+  border: 1px solid #ead79e;
+}
+
+
+/* =========================================================
+   CLAIM TEXT
+========================================================= */
+
+.claim-text {
+  margin: 17px 0;
+
+  color: #263548;
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CONFIDENCE
+========================================================= */
+
+.confidence {
+  padding-top: 13px;
+
+  color: #697687;
+
+  border-top: 1px solid #edf0f4;
+
+  font-size: 13px;
+}
+
+.confidence strong {
+  color: #364454;
+}
+
+
+/* =========================================================
+   EVIDENCE
+========================================================= */
+
+.evidence {
+  margin-top: 24px;
+}
+
+.evidence h3 {
+  margin: 0 0 12px;
+
+  color: #1c3f75;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   EVIDENCE ITEM
+========================================================= */
+
+.evidence-item {
+  margin-top: 10px;
+
+  padding: 17px 18px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e3e8ef;
+
+  border-left: 4px solid #396db3;
+
+  border-radius: 8px;
+}
+
+.evidence-item p {
+  margin: 0 0 12px;
+
+  color: #3c4958;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   EVIDENCE META
+========================================================= */
+
+.evidence-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  flex-wrap: wrap;
+
+  padding-top: 10px;
+
+  border-top: 1px solid #e8edf2;
+
+  color: #7a8695;
+
+  font-size: 12px;
+}
+
+.evidence-meta a {
+  color: #2e61a4;
+
+  font-weight: 650;
+
+  text-decoration: none;
+}
+
+.evidence-meta a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #edf1f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b5c0cd;
+
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #91a0b1;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .container {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+
+  .header {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .header {
+    padding: 36px 5%;
+  }
+
+  .header h1 {
+    font-size: 29px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 25px 2.5% 50px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .score-card {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 25px;
+  }
+
+  .claim-header {
+    align-items: flex-start;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .header h1 {
+    font-size: 25px;
+  }
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  textarea {
+    min-height: 200px;
+
+    padding: 15px;
+
+    font-size: 14px;
+  }
+
+  .claim {
+    padding: 17px;
+  }
+
+  .claim-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .evidence-meta {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 7px;
+  }
+}
