@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "text": "The Taj Mahal was commissioned by the Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal.",
+    "source": "Historical reference"
+  },
+  {
+    "id": 2,
+    "text": "The Taj Mahal is located in Agra, Uttar Pradesh, India.",
+    "source": "Geographical reference"
+  },
+  {
+    "id": 3,
+    "text": "Construction of the Taj Mahal began around 1632 and the main mausoleum was completed around 1638.",
+    "source": "Historical reference"
+  },
+  {
+    "id": 4,
+    "text": "Akbar was a Mughal emperor who ruled the Mughal Empire from 1556 to 1605.",
+    "source": "Historical reference"
+  },
+  {
+    "id": 5,
+    "text": "The Eiffel Tower is located in Paris, France.",
+    "source": "Geographical reference"
+  },
+  {
+    "id": 6,
+    "text": "The Eiffel Tower was completed in 1889 for the Exposition Universelle.",
+    "source": "Historical reference"
+  }
+]
